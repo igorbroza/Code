@@ -7,6 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
         <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/about.css') }}" rel="stylesheet">
 
     </head>
 
@@ -89,6 +90,7 @@
                     </div>
                 </div>
             </div>
+        
 
 
             <a href="#mainSlider" class="carousel-control-prev" role="button" data-bs-slide="prev">
@@ -99,6 +101,32 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+        </div>
+
+        <div id="about-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">Arte Gesso: Transformando Ambientes com Qualidade e Criatividade em Drywall</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="{{ asset('img/gesso4.jpeg') }}" alt="Arte Gesso">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="about-title">Uma Empresa De Drywaal</h3>
+                        <p>A Arte Gesso é uma empresa renomada no ramo da construção civil</p>
+                        <p>No mercado altamente competitivo da construção, a Arte Gesso se estabeleceu como referência quando se trata de trabalhar com Drywall.</p>
+                        <p>A equipe de profissionais especializados da Arte Gesso está preparada para atender às necessidades únicas de cada projeto</p>
+                        <p>Uma das principais vantagens do Drywall é a rapidez na execução das obras. Em comparação aos métodos tradicionais de construção</p>
+                        <ul id="about-list">
+                            <li><i class="fas fa-check"></i>Uma das principais vantagens do Drywall</li>
+                            <li><i class="fas fa-check"></i>Uma das principais vantagens do Drywall</li>
+                            <li><i class="fas fa-check"></i>Uma das principais vantagens do Drywall</li>
+                            <li><i class="fas fa-check"></i>Uma das principais vantagens do Drywall</li>
+                            <li><i class="fas fa-check"></i>Uma das principais vantagens do Drywall</li>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>

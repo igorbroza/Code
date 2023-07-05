@@ -1,0 +1,16 @@
+#services-area img {
+    width: 120px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0px 0px 20px 0px;
+}
+
+.service-box h4 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-box:hover > img, .service-box:hover > h4{
+    color: rgb(31, 184, 176);
+}

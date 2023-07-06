@@ -1,14 +1,4 @@
-body {
-    font-family: 'Arial';
+.navbar {
+    background-color: rgb(199, 199, 199);
 }
-
-.row {
-    margin: 0;
-}
-
-.container {
-    padding: 20px 0;
-}
-
-
 

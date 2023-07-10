@@ -29,7 +29,7 @@ Route::resource('/contatos', 'ContatoController');
 
 Route::resource('/sobre', 'SobreController');
 
-Route::resource('/obras', 'ObrasController');
+Route::resource('/obras', 'ObrasController')->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

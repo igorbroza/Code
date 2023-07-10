@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PermissionController;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -12,6 +13,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Models\Type;
+use App\Models\Permission;
+
+
 
 class RegisteredUserController extends Controller
 {
@@ -20,7 +25,8 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $types = Type::orderBy('nome')->get();
+        return view('auth.register', compact('types'));
     }
 
     /**
@@ -39,10 +45,15 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'type_id' => $request->type_id,
             'password' => Hash::make($request->password),
         ]);
 
+
+
         event(new Registered($user));
+
+        PermissionController::loadPermissions(Auth::user()->type_id);
 
         Auth::login($user);
 

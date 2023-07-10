@@ -100,10 +100,10 @@
                 <div class="col-lg-3">
                     <h5>Links:</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Página Inicial</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="{{route('home')}}">Página Inicial</a></li>
+                        <li><a href="{{route('sobre.index')}}">Sobre Nós</a></li>
+                        <li><a href="{{route('obras.index')}}">Serviços</a></li>
+                        <li><a href="{{route('contatos.index')}}">Contato</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -117,7 +117,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>&copy; 2023 Nome da Empresa. Todos os direitos reservados.</p>
+                    <p>&copy; 2023 Arte Gesso. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>

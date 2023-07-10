@@ -6,9 +6,15 @@ use Illuminate\Http\Request;
 
 class ObrasController extends Controller
 {
-    public function index()
-    {
+    public function index() {
+        if(!PermissionController::isAuthorized('obras.index')) {
+            abort(403);
+        }
 
-        return view('home');
+
+
+        $permissions = session('user_permissions');
+        return view('obras', compact('permissions'));
     }
+
 }
